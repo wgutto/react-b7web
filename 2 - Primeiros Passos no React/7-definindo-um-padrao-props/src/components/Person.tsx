@@ -10,7 +10,7 @@ export const Person = ({
     roles
 }: Props) => {
     return (
-        <div className="flex text-">
+        <div className="flex flex-col gap-2">
             <h1>{name}</h1>
             <img src={avatar} alt={name} className="w-44" />
 
