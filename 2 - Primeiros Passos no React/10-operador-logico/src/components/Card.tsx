@@ -4,31 +4,14 @@ type Props = {
 }
 export const Card = ({phrase, autor}: Props) => {
 
-
-// Codigo funcional, mas muito longo
-
-/*    
-    if(autor) {
-        return (
-            <div className="border-2 border-red-500 p-2 text-center rounded-md">
-                <p className="text-3xl italic">&quot;{phrase}&quot;</p>
-                <h2 className="text-right underline">{autor}</h2>
-            </div>
-        )
-    } else {
-        return (
-            <div className="border-2 border-red-500 p-2 text-center rounded-md">
-                <p className="text-3xl italic">&quot;{phrase}&quot;</p>
-                <h2 className="text-right underline">Autor desconhecido</h2>
-            </div>
-        )
-    }
-*/
-
     return (
         <div className="border-2 border-red-500 p-2 text-center rounded-md">
             <p className="text-3xl italic">&quot;{phrase}&quot;</p>
-            <h2 className="text-right underline">{autor ? autor : "Autor deconhecido"}</h2>
+
+
+            {autor &&
+                <h2 className="text-right underline">{autor ? autor : "Autor deconhecido"}</h2>
+            }
         </div>
     )
 }

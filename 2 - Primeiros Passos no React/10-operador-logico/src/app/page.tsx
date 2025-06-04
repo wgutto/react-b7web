@@ -6,6 +6,7 @@ const Page = () => {
 
       <Card
         phrase="Frase de efeito2"
+        autor="Benzema Buarque"
       />
 
     </div>
