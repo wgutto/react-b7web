@@ -1,4 +1,4 @@
-import { pegarData } from "@/components/pegarData"
+import { PegarData } from "@/components/pegarData"
 
 const Page = () => {
   return (
@@ -7,7 +7,7 @@ const Page = () => {
       <p className="text-xl">Quadrado e Circulo</p>
 
       <div>
-        <pegarData/>
+        <PegarData/>
       </div>
     </div>
   )
