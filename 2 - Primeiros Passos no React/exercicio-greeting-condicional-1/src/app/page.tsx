@@ -5,7 +5,7 @@ const Page = () => {
 
   const data = new Date()
 
-  const hora = 24
+  const hora = data.getHours()
   const minutos = data.getMinutes()
 
   let menssagem = ''
