@@ -8,12 +8,10 @@ const Page = () => {
 
   const adicionar = () => {
     setContador(contador + 1)
-    console.log(contador)
   }
 
   const remover = () => {
     setContador(contador - 1)
-    console.log(contador)
   }
 
   return (
