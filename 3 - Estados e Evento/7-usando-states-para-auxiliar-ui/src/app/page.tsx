@@ -4,23 +4,26 @@ import { useState } from "react"
 
 const Page = () => {
 
-  const [contador, setContador] = useState(0)
+  const [mostrarArea, setMostrarArea] = useState(false)
 
-  const adicionar = () => {
-    setContador(contador + 1)
-  }
-
-  const remover = () => {
-    setContador(contador - 1)
+  const botaoArea = () => {
+  if(mostrarArea) {
+    setMostrarArea(false)
+  } else (
+    setMostrarArea(true)
+  )
   }
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center gap-4">
-      {contador}
 
-      <button onClick={adicionar} className="bg-blue-600 py-2 px-3 rounded-md cursor-pointer">+ 1</button>
 
-      <button onClick={remover} className="bg-blue-600 py-2 px-3 rounded-md cursor-pointer">- 1</button>
+      <button onClick={botaoArea} className="bg-blue-600 py-2 px-3 rounded-md cursor-pointer">{mostrarArea ? 'Esconder' : 'Mostrar area'}</button>
+      
+
+      {mostrarArea && 
+        <div className="bg-yellow-600 px-3 py-2">Area secreta</div>
+      }
     </div>
   )
 }
