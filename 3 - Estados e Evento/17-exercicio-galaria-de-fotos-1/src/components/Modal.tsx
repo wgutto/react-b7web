@@ -1,15 +1,15 @@
 type Props = {
     foto: string
-    fecharModal: () => void
+    fecharModalFunction: () => void
 }
 
-export const Modal = ({foto, fecharModal}: Props) => {
+export const Modal = ({foto, fecharModalFunction}: Props) => {
     return (
         <div>
-            <div className="fixed left-0 top-0 right-0 bottom-0 flex justify-center items-center" onClick={fecharModal}>
-                <img src={`/assets/${foto}`} alt="" className="max-w-screen max-h-screen"/>
+            <div onClick={fecharModalFunction} className="fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center bg-black/50">
+                <img src={`assets/${foto}`} alt="" className="max-w-screen max-h-screen"/>
             </div>
-            <div className="fixed top-5 right-5 w-10 h-10 cursor-pointer text-white text-5xl" onClick={fecharModal}>
+            <div onClick={fecharModalFunction} className="text-5xl text-white fixed top-5 right-5 cursor-pointer">
                 X
             </div>
         </div>
